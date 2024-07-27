@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title id="titlePage">CriptoMoeda</title>
+  <link href="./output.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@^3.0/dist/tailwind.min.css" rel="stylesheet" />
+  <style>
+    /* Custom Glass Effect */
+    .glass {
+      background: rgba(255, 255, 255, 0.1);
+      /* Semi-transparent white */
+      backdrop-filter: blur(3px);
+      /* Blurs the background */
+      border-radius: 15px;
+      /* Rounded corners */
+      box-shadow: 1px 15px 15px rgba(128, 128, 128, 0.212);
+    }
+  </style>
+</head>
+
+<body class="bg-gray-100 text-gray-900">
+
+  <!-- Hero Section -->
+  <section id="sobre" class="bg-hero-pattern bg-no-repeat bg-[length:100vw_100vh] h-screen  py-16">
+    <div class="container mx-auto text-center glass h-[100%] ">
+      <h1
+        class=" absolute mx-auto py-4 flex border w-fit bg-gradient-to-r blur-xl from-blue-500 via-teal-500 to-pink-500 bg-clip-text text-6xl box-content font-extrabold text-transparent text-center select-none text-[4rem] font-extrabold mb-4">
+      </h1>
+      <div id="title"
+        class=" relative top-0 w-fit h-auto py-4 mx-auto  justify-center flex bg-gradient-to-r items-center from-blue-900  to-purple-600 bg-clip-text text-6xl font-extrabold text-transparent text-center select-auto">
+
+      </div>
+      <h2 class="text-[4rem] font-extrabold mb-10 text-blue-950 ">ON SOLANA</h2>
+
+      <h2
+        class="p-[4rem] text-[5rem] bg-gradient-to-r items-center from-blue-900  to-purple-600 bg-clip-text text-6xl font-extrabold text-transparent text-center select-auto">
+        Contract</h2>
+      <div class="flex items-center p-4  w-[60%]  mx-auto bg-white  border border-gray-300 rounded-lg shadow">
+        <div id="textToCopy" class="text-blue-950 drop-shadow-lg font-bold text-3xl mr-4"></div>
+
+        <button id="copyButton"
+          class="p-2 bg-blue-500 text-white rounded hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          onclick="copyText()">
+          <img src="https://img.icons8.com/material-outlined/24/ffffff/copy.png" alt="Ícone de Copiar">
+        </button>
+      </div>
+
+
+      <ul class="flex flex-row  flex-1   h-[25rem] items-end justify-evenly">
+        <li> <a id=" linkPump"><img src="./images/pumpfun.png" class="w-44" alt="Pumpfun"></img></a></li>
+        <li><a id="linkTelegram"> <img src="./images/telegram.png" class="w-44" alt="Telegram"></img>
+          </a> </li>
+
+      </ul>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+
+  <!-- Footer -->
+  <script>
+    // VARIÁVEIS
+    const ca = "CT7D5xw975Zouic3McgJNjV1TBHw8CvWamFeShsNpump"
+    const title = "$ULTIMATE SOLANA DEGENS CLUB"
+    const titlePage = "$ULTIMATE SOLANA DEGENS CLUB"
+    const linkPump = "https://pump.fun/CT7D5xw975Zouic3McgJNjV1TBHw8CvWamFeShsNpump"
+    const linkTelegram = "https://pump.fun/CT7D5xw975Zouic3McgJNjV1TBHw8CvWamFeShsNpump"
+    document.querySelector("#textToCopy").innerHTML = ca
+    document.querySelector("#title").innerHTML = title
+    document.querySelector("#titlePage").innerHTML = titlePage
+    document.querySelector("#linkPump").setAttribute("href", linkPump)
+    document.querySelector("#linkPump").setAttribute("href", linkTelegram)
+
+
+
+    function copyText() {
+      // Obter o texto da div
+      const textToCopy = ca;
+
+      // Criar um elemento temporário para copiar o texto
+      const tempInput = document.createElement('textarea');
+      tempInput.value = textToCopy;
+      document.body.appendChild(tempInput);
+
+      // Selecionar o texto e copiá-lo
+      tempInput.select();
+      document.execCommand('copy');
+
+      // Remover o elemento temporário
+      document.body.removeChild(tempInput);
+
+      // Opcional: Adicionar feedback para o usuário
+      alert('Texto copiado para a área de transferência!');
+    }
+  </script>
+</body>
+
+</html>
